@@ -6,7 +6,7 @@ import sys
 input = sys.stdin.readline
 
 # ==============================================
-# 📥 PARSE INPUT: Single array per test case
+# PARSE INPUT: Single array per test case
 # Example:
 # 2          <- number of test cases
 # 5          <- size of first array
@@ -17,29 +17,42 @@ input = sys.stdin.readline
 
 def parse_input():
     t = int(input())
-    test_cases = []
-    for _ in range(t):
-        n = int(input())                      # n = size of array
-        arr = list(map(int, input().split())) # arr = list of integers
-        test_cases.append((n, arr))
-    return test_cases
+    # test_cases = []
+    # for _ in range(t):
+    #     n = int(input())                      # n = size of array
+    #     arr = list(map(int, input().split())) # arr = list of integers
+    #     test_cases.append((n, arr))
+    # return test_cases
+    return t
 
 
 # ==============================================
-# 🧠 LOGIC FUNCTION: Write your solution here
+# LOGIC FUNCTION: Write your solution here
 # This is where you implement your per-test-case logic.
 # You can use one of the output styles below.
 # ==============================================
 
 def run():
-    test_cases = parse_input()
-    for n, arr in test_cases:
-        # 🚧 WRITE YOUR LOGIC BELOW 🚧
+    test_case = parse_input()
+    # test_cases = parse_input()
+    # for n, arr in test_cases:
+        # WRITE YOUR LOGIC BELOW 
 
         # Example 1: Output a single number
         # print(sum(arr))
-
-        # Example 2: Output YES or NO
+    if test_case < 3 or test_case > 100:
+        print("NO")
+        return
+    if test_case % 2 == 0:
+        print("YES")
+        return 
+    else:
+        print("NO")
+        return
+    
+        # if n % 2 == 0: 
+        #     print("YES")
+        # # Example 2: Output YES or NO
         # if all(x == arr[0] for x in arr):
         #     print("YES")
         # else:
@@ -54,10 +67,10 @@ def run():
         #     print(num)
         # print("---")  # Optional separator
 
-        pass  # Remove this when you start writing
+        # Remove this when you start writing
 
 # ==============================================
-# 🔁 MAIN ENTRY POINT
+#  MAIN ENTRY POINT
 # ==============================================
 
 if __name__ == "__main__":
